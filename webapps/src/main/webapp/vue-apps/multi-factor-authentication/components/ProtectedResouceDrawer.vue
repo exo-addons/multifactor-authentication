@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import {getNavigations, getProtectedNavigations} from '../multiFactorServices';
+import {getProtectedNavigations} from '../multiFactorServices';
 export default {
   data: () => ({
     drawer: false,
@@ -140,15 +140,15 @@ export default {
       }
     },
     getNavigations() {
-      getNavigations().then(data => {
+      return this.$siteService.getSites(null, 'USER', 'global').then(data => {
         const navs = data;
         navs.forEach(nav => {
-          nav.name = nav.key.name ;
-          if (nav.key.type === 'PORTAL') {
-            nav.id=`/portal/${nav.key.name}`;
-          } else if (nav.key.type === 'GROUP') {
-            const modifiedName = nav.key.name.replaceAll('/',':');
-            nav.id=`/portal/g/${modifiedName}`;
+          nav.label = nav.displayName ;
+          if (nav.siteType === 'PORTAL') {
+            nav.id =`/portal/${nav.name}`;
+          } else if (nav.siteType === 'GROUP') {
+            const modifiedName = nav.name.replaceAll('/',':');
+            nav.id =`/portal/g/${modifiedName}`;
           }
         });
         this.navigations = navs;
