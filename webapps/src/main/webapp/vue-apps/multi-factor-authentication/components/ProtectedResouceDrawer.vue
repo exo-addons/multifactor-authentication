@@ -140,7 +140,7 @@ export default {
       }
     },
     getNavigations() {
-      return this.$siteService.getSites(null, 'USER', 'global').then(data => {
+      return this.$siteService.getSites(null, 'USER', 'global', true).then(data => {
         const navs = data;
         navs.forEach(nav => {
           nav.label = nav.displayName ;
