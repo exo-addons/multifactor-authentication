@@ -5,12 +5,12 @@
   <parent>
     <artifactId>addons-exo-parent-pom</artifactId>
     <groupId>org.exoplatform.addons</groupId>
-    <version>18-M06.1</version>
+    <version>18-security-fix-SNAPSHOT</version>
     <relativePath/>
   </parent>
   <groupId>org.exoplatform.addons.multifactor-authentication</groupId>
   <artifactId>multifactor-authentication-parent</artifactId>
-  <version>7.0.x-SNAPSHOT</version>
+  <version>7.0.x-security-fix-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo MultiFactor Authentication - Parent POM</name>
 
@@ -28,7 +28,7 @@
   </scm>
   <properties>
     <!-- 3rd party libraries versions -->
-    <org.exoplatform.commons-exo.version>7.0.x-SNAPSHOT</org.exoplatform.commons-exo.version>
+    <org.exoplatform.commons-exo.version>7.0.x-security-fix-SNAPSHOT</org.exoplatform.commons-exo.version>
 
     <!-- Sonar properties -->
     <sonar.organization>exoplatform</sonar.organization>
