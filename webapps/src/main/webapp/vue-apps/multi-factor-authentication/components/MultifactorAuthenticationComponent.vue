@@ -1,7 +1,7 @@
 <template>
   <v-app id="multifactorAuthentication">
-    <div v-if="!isManage2faPage" class="d-flex">
-      <v-card class="my-8 mr-4 ml-4 border-radius firstBlock" flat>
+    <div v-if="!isManage2faPage" class="d-flex application-body">
+      <v-card class="my-8 mr-4 ml-4 firstBlock" flat>
         <v-list>
           <v-list-item>
             <v-list-item-content>

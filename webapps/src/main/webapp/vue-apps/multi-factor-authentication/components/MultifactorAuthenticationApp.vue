@@ -1,7 +1,7 @@
 <template>
-  <v-app class="white">
+  <v-app>
     <multifactor-authentication-component v-if="!isManage2faPage" />
-    <div class="d-flex">
+    <div class="d-flex application-body">
       <div
         v-if="isManage2faPage"
         class="my-11 mr-4 ml-4 border-radius firstBlock"
