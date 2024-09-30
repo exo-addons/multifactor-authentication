@@ -4,7 +4,7 @@
   <parent>
     <artifactId>multifactor-authentication-parent</artifactId>
     <groupId>org.exoplatform.addons.multifactor-authentication</groupId>
-    <version>7.0.x-SNAPSHOT</version>
+    <version>7.0.0-20240930</version>
   </parent>
   <artifactId>multifactor-authentication-webapps</artifactId>
   <packaging>war</packaging>
