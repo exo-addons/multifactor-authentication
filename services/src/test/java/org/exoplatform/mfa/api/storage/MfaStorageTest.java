@@ -1,28 +1,25 @@
 package org.exoplatform.mfa.api.storage;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
+import static org.mockito.Mockito.mock;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.Mock;
+
 import org.exoplatform.commons.api.settings.ExoFeatureService;
-import org.exoplatform.commons.persistence.impl.EntityManagerService;
 import org.exoplatform.container.ExoContainerContext;
 import org.exoplatform.container.PortalContainer;
-import org.exoplatform.container.RootContainer;
 import org.exoplatform.container.component.RequestLifeCycle;
 import org.exoplatform.mfa.storage.MfaStorage;
 import org.exoplatform.mfa.storage.dao.RevocationRequestDAO;
 import org.exoplatform.mfa.storage.dto.RevocationRequest;
 import org.exoplatform.portal.branding.BrandingService;
 import org.exoplatform.portal.branding.BrandingServiceImpl;
-import org.exoplatform.services.naming.InitialContextInitializer;
 import org.exoplatform.services.resources.ResourceBundleService;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mock;
-
-import static org.jgroups.util.Util.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.fail;
-import static org.mockito.Mockito.mock;
 
 public class MfaStorageTest {
   private PortalContainer container;
